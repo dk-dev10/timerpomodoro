@@ -1,0 +1,39 @@
+.timerContainer {
+  border: var(--border-def);
+  border-radius: 1rem;
+  padding: 1rem;
+
+  display: flex;
+}
+
+.timerFnBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+}
+
+.timerPeriod {
+  display: flex;
+  justify-content: space-around;
+}
+
+.timerCountdown {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  gap: 1rem;
+
+  & h1 {
+    font-size: var(--fz-xxl);
+    line-height: var(--fz-xxl);
+  }
+}

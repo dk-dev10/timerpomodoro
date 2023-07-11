@@ -1,0 +1,6 @@
+
+.progressbarContent {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fz-m);
+}

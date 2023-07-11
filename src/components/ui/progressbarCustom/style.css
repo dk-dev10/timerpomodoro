@@ -1,0 +1,15 @@
+.progressbar {
+  width: 100%;
+  height: 0.75rem;
+  border: var(--border-def);
+  border-radius: 0.75rem;
+  background-color: rgba(217, 217, 217, 0.5);
+
+  & .active {
+    width: calc(67% + 2px);
+    height: 100%;
+    border-radius: 0.5rem;
+    background-color: #000;
+    margin: 0 -1px;
+  }
+}

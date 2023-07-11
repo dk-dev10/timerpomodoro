@@ -1,0 +1,57 @@
+.checkboxContainer {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  padding-left: 1.5rem;
+}
+
+.checkboxContainer input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkboxCustom {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+}
+
+.checkboxCustom::after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease;
+  width: inherit;
+  height: inherit;
+  background-image: url('./done.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+}
+
+.checkboxContainer input[type='checkbox']:checked ~ .checkboxCustom {
+  background: #000;
+  border: #000;
+  display: block;
+}
+
+.checkboxContainer input[type='checkbox']:checked ~ .checkboxCustom::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.checkboxContainer input[type='checkbox']:checked ~ .checkboxText {
+  text-decoration:line-through;
+}

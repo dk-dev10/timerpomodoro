@@ -1,0 +1,59 @@
+:root {
+  --container-pc: clamp(320px, 94%, 1440px);
+  --fz-xxl: 3rem;
+  --fz-xl: 2rem;
+  --fz-l: 1.5rem;
+  --fz-m: 1.125rem;
+  --fz-s: .875rem;
+
+  --pd-m: 1.2rem;
+
+  --box-shadow: 5px 5px 0px 4px #000;
+  --border-radius: 1.5rem;
+  --border-def: 2px solid #000;
+}
+
+:root {
+  font-size: 1rem;
+  font-family: 'Reem Kufi';
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 1);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: var(--container-pc);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

@@ -1,0 +1,26 @@
+.circleBtn {
+  --wh-z: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--wh-z);
+  height: var(--wh-z);
+  border-radius: 50%;
+  border: var(--border-def);
+  background-color: #fff;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 2px 2px 0 0px #000;
+      transform: translate(-2px, -2px);
+    }
+  }
+
+  & img {
+    width: 70%;
+    height: 70%;
+  }
+}
