@@ -1,16 +1,19 @@
 :root {
   --container-pc: clamp(320px, 94%, 1440px);
-  --fz-xxl: 3rem;
+  --fz-xxl: clamp(2.5rem, calc(2.5rem + 1px), 3rem);
   --fz-xl: 2rem;
   --fz-l: 1.5rem;
   --fz-m: 1.125rem;
-  --fz-s: .875rem;
+  --fz-s: 0.875rem;
 
   --pd-m: 1.2rem;
 
-  --box-shadow: 5px 5px 0px 4px #000;
+  --color-main: #fff;
+  --color-secondary: #000;
+
+  --box-shadow: 5px 5px 0px 4px var(--color-secondary);
   --border-radius: 1.5rem;
-  --border-def: 2px solid #000;
+  --border-def: 2px solid var(--color-secondary);
 }
 
 :root {
@@ -21,7 +24,7 @@
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 1);
-  background-color: #ffffff;
+  background-color: var(--color-main);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -36,7 +39,12 @@
   box-sizing: border-box;
 }
 
-ul,li {
+html,body {
+  height: 100dvh;
+}
+
+ul,
+li {
   list-style: none;
 }
 
@@ -45,15 +53,18 @@ ul,li {
   width: var(--container-pc);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+@media (max-width: 420px) {
+  .fullWidth {
+    width: 100%;
+    height: 89vh;
+    padding: 0;
+    margin: 0;
   }
 }
+
+/* if system Light Theme next code for light theme */
+/* @media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--color-main);
+  }
+} */

@@ -1,6 +1,19 @@
+.taskProgress {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
 
 .progressbarContent {
   display: flex;
   justify-content: space-between;
+  align-items: end;
   font-size: var(--fz-m);
+  line-height: var(--fz-m);
+
+  & :is(h1) {
+    font-size: var(--fz-xl);
+    line-height: var(--fz-xl);
+  }
 }
+

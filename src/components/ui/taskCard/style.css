@@ -1,0 +1,49 @@
+.taskBlock {
+  display: block;
+  position: relative;
+
+  width: 100%;
+
+  border: var(--border-def);
+  border-radius: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.taskBlock:hover {
+  --size-transform: 3px;
+  transform: translate(
+    calc(var(--size-transform) * -1),
+    calc(var(--size-transform) * -1)
+  );
+  box-shadow: var(--size-transform) var(--size-transform) 0 #000;
+  cursor: pointer;
+}
+
+.taskBlock .status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5rem;
+  /* background: ; */
+  /* background: #000; */
+}
+
+.taskBlock .status.default {
+  background-color: #6666e3;
+}
+.taskBlock .status.success {
+  background-color: #66e376;
+  /* background-color: #7eccc0; */
+  /* background-color: #1a1a1a; */
+}
+.taskBlock .status.hot {
+  background-color: #df3f3f;
+}
+.taskBlock .status.week {
+  background-color: #9546d8;
+}

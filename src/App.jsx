@@ -1,34 +1,38 @@
 import Header from './components/views/header/header'
 import ActiveTask from './components/views/activeTask/ActiveTask'
 
+import TaskCard from './components/ui/taskCard/TaskCard';
+import TimerPomodoro from './components/views/Timer/TimerPomodoro';
+
+import SectionWrapper from './components/ui/SectionWrapper/SectionWrapper';
+
 import './index.css';
 import './App.css'
-import TaskItem from './components/ui/taskItem/TaskItem';
-import TimerPomodoro from './components/views/Timer/TimerPomodoro';
 
 
 function App() {
   return (
     <main>
       <Header />
-      <div className="container">
+      <div className="container fullWidth">
         <div className="taskSections">
           <div className="taskSectionItem taskSectionItemCreate">
-            <TaskItem percent={12} />
-            <TaskItem percent={73} />
-            <TaskItem />
-            <TaskItem percent={46} />
-            <TaskItem percent={12} />
-            <TaskItem percent={73} />
-            <TaskItem />
-            <TaskItem percent={46} />
+            <SectionWrapper>
+              <TaskCard percent={12} />
+              <TaskCard percent={73} />
+              <TaskCard />
+            </SectionWrapper>
           </div>
           <div className="taskSectionItem taskSectionItemACtive ">
             <TimerPomodoro />
-            <ActiveTask />
+            <SectionWrapper>
+              <ActiveTask />
+            </SectionWrapper>
           </div>
           <div className="taskSectionItem taskSectionItemDone">
-            <ActiveTask />
+            <SectionWrapper>
+              <TaskCard percent={100} />
+            </SectionWrapper>
           </div>
         </div>
       </div>
