@@ -28,6 +28,26 @@ main {
   width: 27.5%;
 }
 
+.taskSectionItemCreate {
+  position: relative;
+}
+
+.addTaskBtn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+
+  background-color: #76e366;
+}
+
+.closeBtn {
+  background-color: #e36666;
+}
+
+.addTaskDialog {
+  padding: 1rem;
+}
+
 .taskSectionItemACtive {
   width: 45%;
   display: flex;

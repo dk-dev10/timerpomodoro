@@ -24,3 +24,14 @@
     height: 70%;
   }
 }
+
+.defaultBtn {
+  width: 100%;
+  font-size: var(--f);
+  padding: 0.5em;
+
+  background: #fff;
+  border: var(--border-def);
+  border-radius: 1rem;
+  color: #000;
+}

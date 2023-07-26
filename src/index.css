@@ -18,7 +18,7 @@
 
 :root {
   font-size: 1rem;
-  font-family: 'Reem Kufi';
+  font-family: 'Jost', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -37,9 +37,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: 500;
 }
 
-html,body {
+html,
+body {
   height: 100dvh;
 }
 

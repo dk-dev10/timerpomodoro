@@ -8,9 +8,26 @@ import SectionWrapper from './components/ui/SectionWrapper/SectionWrapper';
 
 import './index.css';
 import './App.css'
+import CircleButton from './components/ui/button/CircleButton';
+import { useState } from 'react';
+import { Dialog, DialogContent } from '@mui/material';
+import InputTitle from './components/ui/input/inputTitle';
+import TextareCustom from './components/ui/input/textareCustom';
 
 
 function App() {
+
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
   return (
     <main>
       <Header />
@@ -21,7 +38,16 @@ function App() {
               <TaskCard percent={12} />
               <TaskCard percent={73} />
               <TaskCard />
+              <TextareCustom placeholder='Task title' />
             </SectionWrapper>
+            <CircleButton icon='plus' otherClasses='addTaskBtn' customClick={handleClickOpen} >X</CircleButton>
+            <Dialog open={open} onClose={handleClose} >
+              <DialogContent className='addTaskDialog' >
+                <div className="taskTitle">
+                  <InputTitle title='Task title' placeholder='Task Title' />
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
           <div className="taskSectionItem taskSectionItemACtive ">
             <TimerPomodoro />
