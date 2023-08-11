@@ -1,5 +1,6 @@
 import InputCustom from './input'
-import './style.css'
+
+import './input.css'
 
 const InputTitle = ({ title, row, ...other }) => {
   return (

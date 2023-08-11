@@ -1,5 +1,6 @@
-import './style.css'
 import { TextareaAutosize } from '@mui/material';
+
+import './input.css'
 
 
 const TextareCustom = ({ ...other }) => {

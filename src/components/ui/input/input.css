@@ -6,6 +6,11 @@
   font-size: 1rem;
   color: #000;
   font-family: 'Jost';
+  width: 100%;
+
+  &:active, &:focus {
+    border-color: #6666e3;
+  }
 }
 
 .textareaCustom {

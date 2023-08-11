@@ -1,4 +1,4 @@
-import './style.css'
+import './input.css'
 
 const InputCustom = ({ type = 'text', ...other }) => {
   return (

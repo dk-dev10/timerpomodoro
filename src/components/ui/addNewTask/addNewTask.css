@@ -1,0 +1,43 @@
+.addNewTaskWrapper .MuiPaper-root {
+  border-radius: 1rem;
+}
+
+.addNewTaskContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  min-height: 80dvh;
+}
+
+.addNewTaskSidebar {
+  width: 25%;
+}
+
+.addNewTaskMain {
+  width: calc(75% - 1rem);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+
+.addNewTaskBtns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+
+  & button {
+    flex-basis: 45%;
+  }
+}
+
+.taskSidebarOptions {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  & .br05 {
+    text-align: left;
+  }
+}

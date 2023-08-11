@@ -1,12 +1,19 @@
-import './style.css'
+import './button.css'
 
 import icons from './icons'
 
-const CircleButton = ({ icon = 'play', otherClasses, customClick }) => {
+const CircleButton = ({ icon = 'play', otherClasses, ...other }) => {
   return (
-    <button className={`circleBtn ${icon === 'play' ? 'play' : ''} ${otherClasses}`} onClick={customClick} >{
-      <img src={icons[icon]} alt="icon button" />
-    }</button>
+    <button
+      className={`customBtn circleBtn 
+    ${icon === 'play' ? 'play' : ''} 
+    ${otherClasses}`}
+      {...other}
+    >
+      {
+        <img src={icons[icon]} alt="icon button" />
+      }
+    </button>
   )
 }
 

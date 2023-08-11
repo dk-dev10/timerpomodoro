@@ -1,45 +1,39 @@
-import { TaskProgress } from '../../ui'
-import TaskItem from '../../ui/taskItem/TaskItem'
+import { TaskProgress } from '../../ui';
+import CheckList from '../../ui/checkList/checkList';
 
-import './style.css'
+import './style.css';
 
 const tasks = [
   {
     id: 4532213,
     text: 'First',
-    checked: true
+    checked: true,
   },
   {
     id: 3245653,
     text: 'Twenty',
-    checked: true
+    checked: true,
   },
   {
     id: 3242345,
     text: 'Secondary',
-    checked: false
+    checked: false,
   },
-]
+];
 
 const ActiveTask = () => {
   return (
     <div className='activeTask'>
-      <div className="activeTaskProgressbar">
+      <div className='activeTaskProgressbar'>
         <TaskProgress percent={50} h1 />
       </div>
       <p className='activeTaskDescription'>
-        Description to my design web site and design my
-        portfolio case
+        Description to my design web site and design my portfolio case
       </p>
-
-      <div className="activeTaskList">
-        <ul>
-          {tasks.map((task) => <TaskItem key={task.id} {...task} />)}
-        </ul>
-      </div>
-
+      
+      <CheckList tasks={tasks} />
     </div>
-  )
-}
+  );
+};
 
-export default ActiveTask
+export default ActiveTask;

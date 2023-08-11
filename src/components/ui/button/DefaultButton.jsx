@@ -1,9 +1,11 @@
-import './style.css'
+import './button.css';
 
-const DefaultButton = ({children = 'button'}) => {
+const DefaultButton = ({ children = 'button', className, ...other }) => {
   return (
-    <button className='defaultBtn' >{children}</button>
-  )
-}
+    <button className={`customBtn defaultBtn ${className}`} {...other}>
+      {children}
+    </button>
+  );
+};
 
-export default DefaultButton
+export default DefaultButton;
