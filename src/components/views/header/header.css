@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  height: 8vh;
+  max-height: 8vh;
   padding: 1rem 0;
   border-bottom: var(--border-def);
 

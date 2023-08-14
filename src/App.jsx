@@ -25,9 +25,9 @@ function App() {
   };
 
   return (
-    <main>
+    <div className='app'>
       <Header />
-      <div className='container fullWidth'>
+      <main className='main container fullWidth'>
         <div className='taskSections'>
           <div className='taskSectionItem taskSectionItemCreate'>
             <SectionWrapper>
@@ -54,8 +54,8 @@ function App() {
             </SectionWrapper>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
 

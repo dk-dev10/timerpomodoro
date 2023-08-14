@@ -12,8 +12,6 @@ const AddNewTask = ({ handleClose, open }) => {
   const [value, setValue] = useState('');
   const ckecklistNewItem = useRef(null);
 
-  console.log(newCheckItem);
-
   const handleChangeNew = () => {
     setNewCheckItem(true);
     // ckecklistNewItem.focus();
@@ -34,14 +32,8 @@ const AddNewTask = ({ handleClose, open }) => {
     >
       <DialogContent className='addNewTaskContent'>
         <div className='addNewTaskMain'>
-          <div className='taskTitle'>
-            <h3>Task title</h3>
-            <TextareCustom placeholder='Task title' />
-          </div>
-          <div className='taskDescription'>
-            <h3>Description</h3>
-            <TextareCustom placeholder='Description' minRows={3} />
-          </div>
+          <TextareCustom placeholder='Task title' />
+          <TextareCustom placeholder='Description' minRows={3} />
           {newCheckItem ? (
             <CheckList>
               <TextareCustom
@@ -54,15 +46,12 @@ const AddNewTask = ({ handleClose, open }) => {
           ) : null}
         </div>
         <div className='addNewTaskSidebar'>
-          <h3>Options</h3>
-          <div className='taskSidebarOptions'>
-            <DefaultButton className={'br05'}>Status</DefaultButton>
-            <DefaultButton className={'br05'}>Date</DefaultButton>
-            <DefaultButton className={'br05'}>Link</DefaultButton>
-            <DefaultButton className={'br05'} onClick={handleChangeNew}>
-              CheckList
-            </DefaultButton>
-          </div>
+          <DefaultButton className={'br05'}>Status</DefaultButton>
+          <DefaultButton className={'br05'}>Date</DefaultButton>
+          <DefaultButton className={'br05'}>Link</DefaultButton>
+          <DefaultButton className={'br05'} onClick={handleChangeNew}>
+            CheckList
+          </DefaultButton>
         </div>
 
         <div className='addNewTaskBtns'>
