@@ -5,7 +5,7 @@ const CheckList = ({ tasks = [], children }) => {
     <div className='activeTaskList'>
       <ul>
         {tasks.map((task) => (
-          <CheckListItem key={task.id} {...task} />
+          <CheckListItem key={task.text} {...task} />
         ))}
       </ul>
       {children}

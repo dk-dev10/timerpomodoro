@@ -1,6 +1,6 @@
 :root {
   --container-pc: clamp(320px, 94%, 1440px);
-  --fz-xxl: clamp(2.5rem, calc(2.5rem + 1px), 3rem);
+  --fz-xxl: clamp(2.5rem, calc(2.5rem + 1px), 4rem);
   --fz-xl: 2rem;
   --fz-l: 1.5rem;
   --fz-m: 1.125rem;

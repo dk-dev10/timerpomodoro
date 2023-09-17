@@ -1,13 +1,16 @@
 import { TextareaAutosize } from '@mui/material';
 
-import './input.css'
+import './input.css';
+// import { useRef } from 'react';
 
-
-const TextareCustom = ({ ...other }) => {
-
+const TextareCustom = ({ forwardedRef, ...other }) => {
   return (
-    <TextareaAutosize className={`textareaCustom inputCustom`} {...other} />
-  )
-}
+    <TextareaAutosize
+      className={`textareaCustom inputCustom`}
+      {...other}
+      ref={forwardedRef}
+    />
+  );
+};
 
-export default TextareCustom
+export default TextareCustom;

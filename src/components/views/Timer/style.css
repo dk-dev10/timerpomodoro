@@ -14,21 +14,22 @@
 
 .timerContent {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   width: 100%;
   text-align: center;
 }
 
 .timerPeriod {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 
 .timerCountdown {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
 
   gap: 1rem;
 

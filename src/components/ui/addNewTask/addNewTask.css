@@ -27,7 +27,7 @@
   flex-direction: column;
   gap: 1rem;
 
-  border-right: 1px solid #333;
+  /* border-right: 1px solid #333; */
   padding-right: 1rem;
 }
 
@@ -40,4 +40,20 @@
   & button {
     flex-basis: 45%;
   }
+}
+
+.newCheckItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fnBtns {
+  display: flex;
+  gap: .5rem;
+}
+
+.dialogAddBtn {
+  margin-left: auto;
+  margin-top: 1rem;
 }
